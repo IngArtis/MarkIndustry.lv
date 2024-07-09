@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark Industry</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="top-header">
+        <div class="company-name">
+            <h1>Mark Industry</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="lang" data-key="home">Home</a></li>
+                <li><a href="about.html" class="lang" data-key="about">About</a></li>
+                <li><a href="projects.html" class="lang" data-key="projects">Projects</a></li>
+            </ul>
+        </nav>
+        <div class="language-selection">
+            <a href="#" onclick="changeLanguage('en')">ENG</a>
+            <span class="divider">|</span>
+            <a href="#" onclick="changeLanguage('lv')">LV</a>
+            <span class="divider">|</span>
+            <a href="#" onclick="changeLanguage('ru')">RU</a>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="square-section">
+            <div class="square">
+                <h2 class="lang" data-key="home">Mark Industry</h2>
+            </div>
+            <div class="square">
+                <p class="lang" data-key="about">We are dedicated to providing the best services and products to our clients.</p>
+            </div>
+            <div class="square">
+                <img src="image.jpg" alt="Mark Industry Image">
+            </div>
+        </section>
+    </main>
+
+    <footer class="bottom-header">
+        <div class="company-info">
+            <p class="lang" data-key="contact_us">Contact us:</p>
+            <p class="lang" data-key="email">Email: markindustry@gmail.com</p>
+            <p class="lang" data-key="phone">Phone: +37129443312</p>
+            <p class="lang" data-key="address">Address: Jaunā gatve 120, Ogre, LV-5001</p>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
