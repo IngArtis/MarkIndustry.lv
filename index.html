@@ -3,49 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mark Industry</title>
+    <title>Home - Mark Industry</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header class="top-header">
-        <div class="company-name">
-            <h1>Mark Industry</h1>
+    <header>
+        <div class="header-left">
+            <div class="company-name">
+                <a href="index.html">
+                    <img src="images/logo/logoWhite.png" alt="Mark Industry Logo" style="height: 50px;">
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a class="lang" data-key="home" href="index.html">Home</a></li>
+                    <li><a class="lang" data-key="about" href="about.html">About</a></li>
+
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="lang" data-key="home">Home</a></li>
-                <li><a href="about.html" class="lang" data-key="about">About</a></li>
-                <li><a href="projects.html" class="lang" data-key="projects">Projects</a></li>
-            </ul>
-        </nav>
-        <div class="language-selection">
-            <a href="#" onclick="changeLanguage('en')">ENG</a>
-            <span class="divider">|</span>
-            <a href="#" onclick="changeLanguage('lv')">LV</a>
-            <span class="divider">|</span>
-            <a href="#" onclick="changeLanguage('ru')">RU</a>
+        <div class="lang-switch-container">
+            <button class="lang-switch" data-lang="en">ENG</button>
+            <button class="lang-switch" data-lang="lv">LV</button>
+            <button class="lang-switch" data-lang="ru">RU</button>
         </div>
     </header>
 
     <main class="main">
-        <section class="square-section">
-            <div class="square">
-                <h2 class="lang" data-key="home">Mark Industry</h2>
+        <div class="slider">
+            <div class="slides">
+                <img src="images/about/AboutImage01.jpg" alt="First Slider Image" class="active">
+                <img src="images/about/AboutImage02.jpg" alt="Second Slider Image">
+                <img src="images/about/AboutImage03.jpg" alt="Third Slider Image">
+                <img src="images/about/AboutImage04.jpg" alt="Fourth Slider Image">
             </div>
-            <div class="square">
-                <p class="lang" data-key="about">We are dedicated to providing the best services and products to our clients.</p>
-            </div>
-            <div class="square">
-                <img src="image.jpg" alt="Mark Industry Image">
-            </div>
+        </div>
+
+        <h2 class="product-range lang" data-key="product_range">Product Range</h2>
+
+        <section class="features">
+            <a href="welding-machine.html" class="square">
+                <img src="images/range/productrange_01.jpg" alt="Welding Machine" class="background-image">
+                <h3 class="lang" data-key="welding_machine_production">Welding Machine Production</h3>
+                <p class="lang" data-key="welding_machine_production_description_01">Dedicated to producing high-quality, robust welding machines suitable for a wide range of industrial applications.</p>
+            </a>
+
+            <a href="cut-to-length.html" class="square">
+                <img src="images/range/productrange_02.jpg" alt="Blueprint Creation" class="background-image">
+                <h3 class="lang" data-key="cut_to_length">Cut to length Machinery</h3>
+                <p class="lang" data-key="cut_to_length_description_01">This page is dedicated to our Cut to Length Machinery solutions. These machines are designed to efficiently cut large coils of metal into precise lengths for various manufacturing processes.</p>
+            </a>
+
+            <a href="truss_girder.html" class="square">
+                <img src="images/range/productrange_01.jpg" alt="Truss Girder Machinery" class="background-image">
+                <h3 class="lang" data-key="truss_girder_title">Truss Girder</h3>
+                <p class="lang" data-key="truss_girder_description_01">Truss girders offer robust structural support, integrating precision-engineered components for optimal load distribution in construction projects.</p>
+            </a>
+
+            <a href="bend_shaping.html" class="square">
+                <img src="images/range/productrange_02.jpg" alt="Bend and shaping Machinery" class="background-image">
+                <h3 class="lang" data-key="bend_shaping_tittle">Bend and Shaping Machinery</h3>
+                <p class="lang" data-key="bend_and_shaping_description_01">Utilizing the latest software to provide realistic 3D visualizations of engineering concepts and projects.</p>
+            </a>
+
+            <a href="3d-visualization.html" class="square">
+                <img src="images/range/productrange_01.jpg" alt="3D Visualization" class="background-image">
+                <h3 class="lang" data-key="3d_visualization">3D Visualization</h3>
+                <p class="lang" data-key="3d_visualization_description_01">Utilizing the latest software to provide realistic 3D visualizations of engineering concepts and projects.</p>
+            </a>
         </section>
+
+        <div class="company-description">
+            <p class="lang" data-key="company_description">This is a brief description of our company. We specialize in innovative solutions and exceptional service.</p>
+            <a href="about.html" class="learn-more lang" data-key="learn_more">Learn More</a>
+        </div>
+
+        <div class="video-and-link">
+    <!-- Video Embed -->
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+    <!-- Link to YouTube Channel -->
+            <a href="http://www.youtube.com/@MarkIndustries.infoLV" class="youtube-link">
+                <img src="images/logo/logomedia_01.png" alt="Visit our YouTube channel">
+                <p class="lang" data-key="youtube">Visit Our Youtube Link</p>
+            </a>
+        </div>
     </main>
 
-    <footer class="bottom-header">
-        <div class="company-info">
+    <footer>
+        <div class="footer-content">
             <p class="lang" data-key="contact_us">Contact us:</p>
-            <p class="lang" data-key="email">Email: markindustry@gmail.com</p>
-            <p class="lang" data-key="phone">Phone: +37129443312</p>
+            <p class="lang" data-key="email">Email: markindustry.info@gmail.com</p>
+            <p class="lang" data-key="phone_lv_ru">Phone (Latvian & Russian): +37129443312</p>
+            <p class="lang" data-key="phone_en">Phone (English): +37126987228</p>
             <p class="lang" data-key="address">Address: Jaunā gatve 120, Ogre, LV-5001</p>
         </div>
     </footer>

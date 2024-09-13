@@ -1,156 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 494;
+    font-style: normal;
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
+    overflow-x: hidden;
 }
-
-/* Darker grey background with subtle hover effect */
-body:hover {
-    background-color: #dddddd; /* Slightly darker grey on hover */
-}
-
-.top-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
+header {
+    color: #f0f0f0; /* Light grey text color for contrast */
+    padding: 20px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative; /* Ensure z-index works properly */
-    z-index: 1; /* Ensure header is above main content */
+    background-color: #2a3137;
+    background-size: 100% 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25); /* Optional: Adds depth with a shadow */
+    position: sticky; /* Makes the header stick to the top of the viewport */
+    top: 0; /* Position at the very top */
+    z-index: 1000; /* Ensures it stays above other content */
+    opacity: 0.99;
+}
+/***********************************************/
+.footer-content {
+    background-color: #2a3137;
+    background-size: 100% 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+    color: #fff;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.footer-content p {
+    margin: 0px 0;
+}
+/***********************************************/
+.lang[data-key="welding_machine_title"] {
+    font-size: 2.5em; /* Makes the title larger and more prominent */
+    color: #2a2a2a; /* Slightly darker color for emphasis */
+    padding: 10px 10%; /* Adds padding around the text, 10% horizontal padding for spacing */
+    background-color: #ffffff; /* White background to highlight the title area */
+    margin: 0px 0; /* Adds vertical space around the title */
+    text-align: center;
+}
+
+/* Styling for the description paragraph */
+.lang[data-key="welding_machine_production_desc"] {
+    font-size: 1.25em; /* Slightly larger than normal text for importance */
+    color: #4a4a4a; /* Medium grey for readability */
+    padding: 20px 10%; /* Consistent with the title for alignment */
+    background-color: #ffffff; /* Maintains consistency with the title's background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Consistent shadow as the title */
+    margin: 0 0 20px 0; /* Space below the paragraph */
+    text-align: center;
+}
+/***********************************************/
+
+.lang[data-key="cut_to_length_title"] {
+    font-size: 2.5em; /* Makes the title larger and more prominent */
+    color: #2a2a2a; /* Slightly darker color for emphasis */
+    padding: 10px 10%; /* Adds padding around the text, 10% horizontal padding for spacing */
+    background-color: #ffffff; /* White background to highlight the title area */
+
+    margin: 0px 0; /* Adds vertical space around the title */
+    text-align: center;
+}
+
+/* Styling for the description paragraph */
+.lang[data-key="cut_to_length_desc"] {
+    font-size: 1.25em; /* Slightly larger than normal text for importance */
+    color: #4a4a4a; /* Medium grey for readability */
+    padding: 20px 10%; /* Consistent with the title for alignment */
+    background-color: #ffffff; /* Maintains consistency with the title's background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Consistent shadow as the title */
+    margin: 0 0 20px 0; /* Space below the paragraph */
+    text-align: center;
+}
+/***********************************************/
+
+.lang[data-key="3d_visualization_title"] {
+    font-size: 2.5em; /* Makes the title larger and more prominent */
+    color: #2a2a2a; /* Slightly darker color for emphasis */
+    padding: 10px 10%; /* Adds padding around the text, 10% horizontal padding for spacing */
+    background-color: #ffffff; /* White background to highlight the title area */
+
+    margin: 0px 0; /* Adds vertical space around the title */
+    text-align: center;
+}
+
+/* Styling for the description paragraph */
+.lang[data-key="3d_visualization_desc"] {
+    font-size: 1.25em; /* Slightly larger than normal text for importance */
+    color: #4a4a4a; /* Medium grey for readability */
+    padding: 20px 10%; /* Consistent with the title for alignment */
+    background-color: #ffffff; /* Maintains consistency with the title's background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Consistent shadow as the title */
+    margin: 0 0 20px 0; /* Space below the paragraph */
+    text-align: center;
+}
+/***********************************************/
+.lang[data-key="truss_girder_title"] {
+    font-size: 2.5em; /* Makes the title larger and more prominent */
+    color: #2a2a2a; /* Slightly darker color for emphasis */
+    padding: 10px 10%; /* Adds padding around the text, 10% horizontal padding for spacing */
+    background-color: #ffffff; /* White background to highlight the title area */
+
+    margin: 0px 0; /* Adds vertical space around the title */
+    text-align: center;
+}
+
+/* Styling for the description paragraph */
+.lang[data-key="truss_girder_desc"] {
+    font-size: 1.25em; /* Slightly larger than normal text for importance */
+    color: #4a4a4a; /* Medium grey for readability */
+    padding: 20px 10%; /* Consistent with the title for alignment */
+    background-color: #ffffff; /* Maintains consistency with the title's background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Consistent shadow as the title */
+    margin: 0 0 20px 0; /* Space below the paragraph */
+    text-align: center;
+}
+/***********************************************/
+.lang[data-key="bend_and_shaping_title"] {
+    font-size: 2.5em; /* Makes the title larger and more prominent */
+    color: #2a2a2a; /* Slightly darker color for emphasis */
+    padding: 10px 10%; /* Adds padding around the text, 10% horizontal padding for spacing */
+    background-color: #ffffff; /* White background to highlight the title area */
+
+    margin: 0px 0; /* Adds vertical space around the title */
+    text-align: center;
+}
+
+/* Styling for the description paragraph */
+.lang[data-key="bend_and_shaping_desc"] {
+    font-size: 1.25em; /* Slightly larger than normal text for importance */
+    color: #4a4a4a; /* Medium grey for readability */
+    padding: 20px 10%; /* Consistent with the title for alignment */
+    background-color: #ffffff; /* Maintains consistency with the title's background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Consistent shadow as the title */
+    margin: 0 0 20px 0; /* Space below the paragraph */
+    text-align: center;
+}
+/***********************************************/
+.header-left {
+    display: flex;
+    align-items: center;
+}
+.lang-switch-container {
+    z-index: 1050; /* Higher than the header's z-index */
+    position: relative; /* Adjust if needed */
+    display: flex;
 }
 
 .company-name {
-    margin-right: 20px;
+    margin-right: 30px;
+    margin-left: 15px;
+    display: flex;
+
 }
 
 .company-name h1 {
     margin: 0;
+    display: flex;
 }
 
-.top-header nav ul {
+header nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: flex;
 }
 
-.top-header nav ul li {
+header nav ul li {
     display: inline-block;
-    margin-right: 20px;
+    margin-right: 30px;
+    position: relative;
 }
 
-.top-header nav ul li a {
+header nav ul li a {
     text-decoration: none;
     color: #fff;
+    font-size: 17px;
+    transition: font-weight 0.1s ease;
+    ont-weight: bold;
+
+}
+header nav ul li a:hover {
+    font-weight: bold; /* Makes text bold when hovered */
+    transition: font-weight 0.1s ease;
+    color: #44a1f8;
 }
 
-.language-selection {
-    margin-left: auto;
+
+.lang-switch-container {
+    display: flex;
+    align-items: center;
+    opacity: 1;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25);
+
 }
 
-.language-selection a {
-    text-decoration: none;
-    color: #fff;
-    margin: 0 5px;
+.lang-switch {
+    color: #fff; /* Sets the text color to white */
+    border: none; /* Removes any border */
+    background: transparent; /* Makes the background transparent */
+    cursor: pointer; /* Keeps the pointer cursor to indicate it's clickable */
+    padding: 10px 10px; /* Adds padding for clickable area */
+    margin-left: 0px; /* Adds margin to space out items */
+    transition: color 0.3s; /* Smooth transition for hover effects */
+
 }
 
-.divider {
-    margin: 0 5px;
-    color: #fff;
+.lang-switch:hover {
+    background: #44a1f8;  /* Optional for better visibility */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: bold;
 }
 
-.main {
-    padding: 20px;
+
+.lang-switch-container {
+    position: sticky;
+    top: 0; /* Adjust based on actual header height */
+    right: 0;
+    left: 0;
+    padding: 0px;
 }
 
+
+/***********************************************/
+.slider {
+    position: relative;
+    width: 100%; /* Full width of the parent container */
+    height: 400px; /* Fixed height */
+    overflow: hidden; /* Hides anything outside the container */
+}
+
+.slides img {
+    position: absolute;
+    top: 0; /* Align top edge of the image with the top edge of the container */
+    bottom: 0; /* Align bottom edge of the image with the bottom edge of the container */
+    left: 0; /* Align left edge of the image with the left edge of the container */
+    width: 100%; /* Image width should cover the full container width */
+    height: 400px; /* Fixed height */
+    object-fit: cover; /* Cover the container fully, image may be clipped */
+    transition: opacity 1s ease-in-out; /* Smooth opacity transition */
+    overflow: hidden; /* Hides anything outside the container */
+
+}
+
+.slides img.active {
+    opacity: 1; /* Only the active image is fully visible */
+}
+
+
+/***********************************************/
 .square-section {
     display: flex;
     justify-content: space-around;
     margin-top: 40px; /* Adjust margin top for spacing */
+
+}
+.section {
+    display: flex; /* Using flexbox for layout */
+    justify-content: space-around; /* Evenly spaces the children horizontally */
+    flex-wrap: wrap; /* Allows items to wrap onto the next line on smaller screens */
+    margin: 40px 0; /* Vertical spacing for visual separation */
+    min-width: 600px;
+}
+/***********************************************/
+.product-range {
+    text-align: center; /* Center the text */
+    margin-top: 20px; /* Space after the slider */
+    font-size: 24px; /* Larger text size */
+}
+/***********************************************/
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distributes space evenly */
+    align-items: stretch; /* Aligns items vertically */
+    margin: 0px; /* Margin around the entire grid */
+
 }
 
 .square {
-    width: 200px;
-    height: 200px;
+    position: relative;
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: box-shadow 5s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    margin: 10px; /* Margin around each square */
+    width: calc(33% - 20px); /* Three items per row minus margin */
+
+}
+
+.square:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+
+    /*box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);*/
+
+}
+
+
+
+.features .square img.background-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+
+}
+
+.features .square h3 {
+    position: absolute; /* Absolutely position the title */
+    top: 0px; /* Spacing from the top edge of the square */
+    left: 0px; /* Spacing from the left edge of the square */
+    right: 0px; /* Extend to the right edge of the square */
+    margin: 0; /* Remove default margin */
+    color: #fff; /* White text color for better visibility */
+    background-color: #44a1f8; /* Blue background for the text */
+    padding: 10px 10px; /* Padding around the text */
+    border-radius: 15px 15px 0 0; /* Rounded corners on the top, square corners on the bottom */
+    width: 100%; /* Ensure the background covers the full width */
+    box-sizing: border-box; /* Includes padding and border in the width calculation */
+    font-size: 20px; /* Optional: Adjust font size as needed */
+    text-align: center; /* Centers the text horizontally */
+}
+
+.features .square p {
+    position: absolute;
+    bottom: 0;  /* Aligns it exactly at the bottom */
+    left: 0;    /* Starts from the very left edge */
+    right: 0;
+    margin: 0;/* Stretches to the very right edge */
+    background-color: #44a1f8;  /* Semi-transparent blue background */
+    color: #fff;  /* White text color for better visibility */
+    padding: 10px;  /* Padding around the text */
+    border-radius: 0 0 15px 15px;  /* Rounded corners at the bottom */
+    opacity: 0;  /* Initially hidden */
+    transition: opacity 0.9s ease;  /* Smooth transition for opacity */
+    font-size: 18px;  /* Adjust font size as needed */
+    text-align: center;  /* Centers the text horizontally */
+    overflow: hidden;  /* Prevents any spillover outside the square */
+    box-sizing: border-box;
+}
+
+
+.features .square:hover p {
+    opacity: 1; /* Shows the description on hover */
+}
+
+/***********************************************/
+.company-description {
     text-align: center;
+    margin: 20px 0; /* Add margin for spacing */
+    padding: 20px; /* Padding for the content */
+}
+
+.company-description p {
+    font-size: 18px; /* Adjust the font size as needed */
+    color: #333; /* A darker text color for readability */
+    max-width: 800px; /* Restrict the width of the text for better readability */
+    margin: auto; /* Center the paragraph if the width is restricted */
+}
+
+.learn-more {
+    display: inline-block; /* Make the link behave like a block but fit content */
+    background-color: #44a1f8; /* Same blue color as the square */
+    color: #fff; /* White text for visibility */
+    text-decoration: none; /* Remove underline from the link */
+    padding: 10px 20px; /* Padding inside the square */
+    border-radius: 5px; /* Slightly rounded corners */
+    margin-top: 10px; /* Margin above the button */
+    font-size: 16px; /* Font size for the button text */
+    font-weight: bold; /* Bold text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.9s ease-in-out;
+}
+
+.learn-more:hover {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
+}
+/***********************************************/
+.video-and-link {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: center;
+    margin: 30px 0px;
+}
+
+.video-container {
+    width: 80%; /* Adjust the width as needed */
+    padding-bottom: 40%; /* Aspect ratio for 16:9 videos */
+    height: 0;
+    position: relative;
+    margin-left: 20px; /* Adds margin from the left side */
+    background-color: #fff; /* Background color similar to other squares */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds depth with a shadow */
+    overflow: hidden; /* Ensures nothing spills outside the border */
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px; /* Ensures the video itself also has rounded corners */
+}
+
+
+.youtube-link {
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 40%; /* Adjust based on your design preferences */
+    text-decoration: none;
+    color: #333; /* Text color */
 }
 
-.square img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 8px;
-}
+.youtube-link img {
+    transition: transform 0.9s ease-in-out;
+    max-width: 50%;
+    border-radius: 10px; /* Optional for rounded corners */
 
+
+}
+.youtube-link:hover img {
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    }
+
+.youtube-link span {
+    margin-top: 10px;
+    font-size: 16px; /* Adjust based on your design preferences */
+}
+/***********************************************/
 .about-section {
     text-align: center;
     margin-top: 40px;
 }
-
-.project-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
-    grid-gap: 20px; /* Gap between grid items */
-    margin-top: 40px; /* Adjust margin top for spacing */
-}
-
-.project-square {
+.square-about-tittle {
+    position: relative;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    height: auto;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: box-shadow 5s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    margin: 10px; /* Margin around each square */
+    width: calc(100% - 20px); /* Three items per row minus margin */
+
+}
+.square-about {
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: box-shadow 5s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease;
+    margin: 10px; /* Margin around each square */
+    width: calc(100% - 20px); /* Three items per row minus margin */
+    text-align: left;
+    max-width: 1600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap */
+    padding: 10px;
+}
+/***********************************************/
+
+.zigzag-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap */
+    justify-content: space-between; /* This will help maintain spacing between items */
+
+
 }
 
-.project-square:hover {
-    transform: translateY(-5px); /* Move up slightly on hover */
+.zigzag-item {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Space on the left */
+    position: relative; /* Needed for absolute positioning of arrows */
+    justify-content: space-between; /* Ensures spacing between image and text */
+    width: 100%; /* Full width to ensure wrapping */
+
+
 }
 
-.bottom-header {
-    background-color: #333;
-    color: #fff;
+.image-container {
+    position: relative; /* Relative for positioning arrows */
+    overflow: hidden; /* Hide parts of images that overflow */
+    padding-left: 20px; /* Space inside on the left */
+    padding-right: 20px; /* Space inside on the right */
+    width: 100%; /* Ensures the image is responsive */
+    max-width: 700px; /* Maximum width of the image */
+    min-width: 500px; /* Minimum width of the image */
+    flex: 1 1 60%; /* Flex grow, flex shrink, and basis */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+
+}
+
+.image-container img {
+    width: 100%; /* Full width of the container */
+    height: auto;
+    display: none; /* Hide all images by default */
+    border-radius: 10px; /* Optional styling */
+
+}
+
+.image-container img.active {
+    display: block; /* Only display the active image */
+    padding-bottom: 50px;
+
+}
+.image-container {
+    padding: 0 10px; /* Padding for spacing, adjust as needed */
+}
+.image-left img, .image-right img {
+    width: 100%; /* Full width within their container */
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.image-left, .image-right {
+    display: flex;
+    align-items: center;
+}
+
+.image-left .text, .image-right .text {
+    width: 70%;
+    box-sizing: border-box;
+
+}
+
+.image-left {
+    flex-direction: row;
+}
+
+.image-right {
+    flex-direction: row-reverse; /* Reverses the order for a zigzag effect */
+}
+
+.text {
+    margin: 0 30px; /* Adjust spacing based on your design */
+    flex: 1 1 40%; /* Allocate less space to text relative to images */
     padding: 10px 20px;
-    text-align: center;
-    position: relative; /* Ensure z-index works properly */
-    z-index: 1; /* Ensure footer is above main content */
+
 }
 
-.bottom-header .company-info p {
-    margin: 5px 0;
+.text h2 {
+    color: #333; /* Dark text for titles */
+
 }
 
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-    .top-header {
+.text p {
+    margin-top: 35px;
+    color: #666; /* Lighter text for descriptions */
+
+}
+
+
+/* Styling for slider arrows */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 24px;
+    transform: translateY(-50%);
+    user-select: none; /* Prevent text select when clicking */
+    width: 50px; /* Wider arrows for larger images */
+    height: 50px; /* Taller arrows for better visibility */
+}
+
+.slider-arrow.left-arrow {
+    left: 10px;
+}
+
+.slider-arrow.right-arrow {
+    right: 10px;
+}
+.manual-slider .prev {
+    left: 10px; /* Position from the left edge */
+}
+
+.manual-slider .next {
+    right: 10px; /* Position from the right edge */
+}
+
+
+/***********************************************/
+@media (max-width: 1200px) { /* Adjust this breakpoint to your needs */
+
+
+    .header nav ul li a {
+    font-size: 5px;
+    }
+
+    .lang-switch {
+    font-size: 10px;
+    }
+
+    .square {
+        height: 300px; /* Adjust the height to make squares thinner */
+        width: calc(100% - 20px);
+    }
+
+    .features .square h3{
+    font-size: 16px;
+    }
+
+    .features .square p {
+    font-size: 14px;
+    }
+
+    .item {
+        width: 100%; /* Full width for small screens */
+        margin-bottom: 20px; /* Adds space between stacked items */
+    }
+
+    .company-description p {
+        font-size: 16px; /* Slightly smaller font size on smaller screens */
+    }
+
+    .learn-more {
+        padding: 8px 16px; /* Slightly smaller padding on smaller screens */
+    }
+    .video-and-link {
         flex-direction: column;
-        align-items: stretch;
+        text-align: center;
     }
 
-    .company-name {
-        margin-bottom: 10px;
+    .video-container, .youtube-link {
+        width: 40%;
     }
 
-    .top-header nav ul li {
-        display: block;
-        margin-bottom: 10px;
+    .youtube-link {
+        margin-top: 50px;
     }
-
-    .square-section {
+    .video-container {
+        width: 90%; /* Takes full width on smaller screens */
+        margin-left: 0; /* Removes left margin for full-width use */
+        margin-right: 0; /* Removes left margin for full-width use */
+    }
+    .image-right {
+        flex-direction: column; /* Reset to default column direction */
+    }
+    .image-left img, .image-right img {
+        width: 100%;
+        height: 100%;
+    }
+     .zigzag-item {
+        margin-left: 10px; /* Less space on smaller screens */
+        margin-right: 10px; /* Less space on smaller screens */
         flex-direction: column;
-        align-items: center;
+        flex: 1 1 100%; /* Allows each to take full width of the container */
     }
+    .text {
+        text-align: left; /* Center align text in smaller screens */
+        font-size: 15px;
 
-    .project-section {
-        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+    .image-container {
+        padding-left: 10px; /* Less space inside on smaller screens */
+        padding-right: 10px; /* Less space inside on smaller screens */
+        margin-left: 10px; /* Less space on smaller screens */
+        margin-right: 10px;
+        margin-bottom: 00px;
+        border-radius: 10px; /* Rounded corners for all images and text */
+
+    }
+     .manual-slider .prev, .manual-slider .next {
+        width: 40px; /* Smaller arrows on smaller screens */
+        height: 40px;
+    }
+    .footer-content {
+        font-size: 14px;
+    }
+     .slides img {
+        height: auto; /* Adjust height automatically on smaller screens */
+        min-height: 400px; /* Minimum height to ensure visibility */
     }
 }
